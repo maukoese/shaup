@@ -17,7 +17,6 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->default('https://api.adorable.io/avatars/285/');
             $table->string('email')->unique()->nullable();
             $table->string('phone')->unique()->nullable();
-            $table->string('kra')->unique()->nullable();
             $table->text('details')->nullable();
             $table->json('billing')->default(json_encode(['country' => 'KE', 'county' => 47, 'city' => 'NBO', 'street' => 1, 'address' => '']));
             $table->boolean('verified')->default(0);

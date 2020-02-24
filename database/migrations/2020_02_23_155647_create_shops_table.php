@@ -24,7 +24,7 @@ class CreateShopsTable extends Migration
             $table->boolean('verified')->default(0);
             $table->timestamp('verified_at')->nullable();
             $table->json('location')->nullable();
-            $table->integer('user_id')->nullable();
+            $table->integer('user_id')->unsigned()->index();
             $table->string('slug');
             $table->timestamps();
         });

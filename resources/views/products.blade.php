@@ -5,6 +5,7 @@
     <div class="inner-bg">
         <div class="row remove-70">
             <div class="col-md-4 col-sm-4">
+                <a href='{{url("product")}}'>
                 <div class="woo-product">
                     <figure> <img src="{{asset('images/resources/product-1.jpg')}}" alt=""> </figure>
                     <div class="product-meta">
@@ -19,6 +20,7 @@
                         </ul>
                     </div>
                 </div>
+                </a>
             </div>
             <div class="col-md-4 col-sm-4">
                 <div class="woo-product">

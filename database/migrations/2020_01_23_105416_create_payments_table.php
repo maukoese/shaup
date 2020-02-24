@@ -15,7 +15,7 @@ class CreatePaymentsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id')->unsigned()->index()->nullable();
             $table->integer('client_id')->unsigned()->index()->nullable();
-            $table->integer('package_id')->unsigned()->index()->nullable();
+            $table->integer('shop_id')->unsigned()->index();
             $table->float('amount');
             $table->float('paid');
             $table->string('type')->default('Subscription');

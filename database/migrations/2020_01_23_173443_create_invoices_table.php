@@ -14,7 +14,7 @@ class CreateInvoicesTable extends Migration
         Schema::create('invoices', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id')->unsigned()->unique()->nullable();
-            $table->integer('client_id')->unsigned()->index()->nullable();
+            $table->integer('shop_id')->unsigned()->index();
             $table->float('amount');
             $table->dateTime('due');
             $table->string('status')->default('pending');

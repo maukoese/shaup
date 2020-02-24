@@ -17,8 +17,14 @@ class Access
     public function handle($request, Closure $next)
     {
         if(Auth::check()){
-            $role = auth()->user()->role;
-            return ($request->is($role) || $request->is("$role/*")) ? $next($request) : abort(403);
+            $user = auth()->user();
+            $role = $user->role;
+
+            if (! $user->verified) {
+                return abort(403, 'You need to verify your account to access this service');
+            }
+
+            return ($request->is($role) || $request->is("$role/*") || $role=='admin') ? $next($request) : abort(403, 'You do not have permissions to acces this service.');
         } else {
             return $next($request);
         }

@@ -15,7 +15,8 @@ class CreateSettingsTable extends Migration
             $table->bigIncrements('id');
             $table->string('option');
             $table->json('value');
-            $table->integer('user_id')->unsigned()->unique()->nullable();
+            $table->integer('user_id')->unsigned()->index()->nullable();
+            $table->integer('shop_id')->unsigned()->index()->nullable();
             $table->timestamps();
         });
     }

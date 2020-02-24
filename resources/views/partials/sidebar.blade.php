@@ -30,7 +30,7 @@
 
                     <li class="menu-item-has-children {{App\Setting::is_active('users')}}"> <a title="Users"><i class="fa fa-group"></i><span>Users</span></a>
                         <ul class="mega">
-                            <li><a href='{{ url("customers") }}' title="">Customers</a></li>
+                            <li><a href='{{ url("customers") }}' title="Customers Listing">Customers</a></li>
                             <li><a href='{{ url("merchants") }}' title="">Merchants</a></li>
                             <li><a href='{{ url("admins") }}' title="">Adminstrators</a></li>
                         </ul>
@@ -39,6 +39,8 @@
                     <li><a href='{{ url("$role/inbox") }}' title=""><i class="fa fa-inbox"></i><span>inbox</span><ins>5</ins></a></li>
                     <li><a href="table.html" title=""><i class="fa fa-table"></i><span>table</span></a></li>
                     <li><a href='{{ url("$role/invoice") }}' title=""><i class="fa fa-bar-chart"></i><span>invoice</span></a></li>
+                    <li><a href='{{ url("$role/payments") }}' title=""><i class="fa fa-bar-chart"></i><span>payments</span></a></li>
+                    <li><a href='{{ url("$role/shops") }}' title=""><i class="fa fa-bar-chart"></i><span>shops</span></a></li>
                     <li><a href='{{ url("$role/reports") }}' title=""><i class="fa fa-bar-chart"></i><span>reports & analytics</span></a></li>
 
 

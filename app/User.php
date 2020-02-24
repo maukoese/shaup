@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'phone', 'password', 'avatar', 'role'
+        'name', 'avatar', 'email', 'phone', 'details', 'billing', 'verified', 'email_verified_at', 'provider', 'provider_id', 'password', 'role'
     ];
 
     /**
@@ -34,7 +34,9 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'billing' => 'array'
+        'billing' => 'array',
+        'verified_at' => 'datetime',
+        'verified' => 'boolean'
     ];
 
     public function getPhoneAttribute($phone)

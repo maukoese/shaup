@@ -78,6 +78,8 @@ class RegisterController extends Controller
             $shop_data = $data['shop'];
             $shop_data['avatar'] = "https://api.adorable.io/avatars/285/{$data["name"]}";
             $shop_data['slug'] = str_slug($shop_data['name']);
+            $shop_data['phone'] = $user->phone;
+            $shop_data['email'] = $user->email;
             $shop = Shop::create($shop_data);
             $shop->user_id = $user->id;
             $shop->save();

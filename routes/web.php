@@ -34,7 +34,7 @@ Route::get('confirm/{request}', 'DefaultController@confirm');
 
 Route::get('search', 'SearchController')->name('search');
 
-foreach (['admins', 'merchants', 'customers', 'staffs'] as $roler) {
+foreach (['admins', 'merchants', 'customers'] as $roler) {
     $role = substr($roler, 0, -1);
     Route::get($roler, function () use ($roler, $role) {
         $users = App\User::whereRole($role)->paginate(15);

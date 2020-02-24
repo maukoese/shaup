@@ -1,7 +1,7 @@
 {
     "name": "laravel/shaup",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "An ecommerce dashboard",
     "keywords": [
         "framework",
         "laravel"
